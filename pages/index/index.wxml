@@ -1,0 +1,53 @@
+<!-- <import src="../../WxEmojiView/WxEmojiView.wxml" /> -->
+<view style="text-align: center;margin: 20px;background-color: #ddd;">wxEmojiView 静态图文</view>
+
+ <view class="WxEmojiView">
+  <block wx:for="{{WxEmojiObjs.WxEmojiTextArray}}" wx:key="">
+    <block wx:if="{{item.node == 'text'}}">{{item.text}}</block>
+    <block wx:elif="{{item.node == 'element'}}">
+      <image class="wxEmoji" src="/WxEmojiView/emojis/{{item.text}}" />
+    </block>
+  </block>
+</view> 
+
+
+<view class="WxEmojiViewContainer">
+  <!--效果显示-->
+  <!--输入框 常规下隐藏-->
+  <view class='box'>
+   <view class='circle' bindtap='show'></view>
+    <textarea bindinput='e' class="WxEmojiTextarea" placeholder="这里输入你的文字 支持加入小图标" auto-height="true" bindfocus="WxEmojiTextareaFocus"  bindblur="WxEmojiTextareaBlur" value="{{WxEmojiObjs.textAreaText}}"> </textarea>
+  </view>
+
+<!--  -->
+<swiper style='display:{{display}}'>
+
+    <swiper-item >
+<!--  -->
+ 
+  <view class="WxEmojiChooseChooseView" style="display:{{WxEmojiObjs.showWxEmojiChooseView == 1 ? 'block' : 'none'  }};">
+    <block wx:for="{{WxEmojiObjs.emojiArray}}" wx:key="">
+      <image bindtap="wxPreEmojiTap" style='display:{{display}}' data-text="(臉{{item}})" class="wxPreEmoji" src="/WxEmojiView/emojis/{{item}}.gif" />
+    </block>
+  </view>
+  
+<!--  -->
+   </swiper-item>
+
+    <swiper-item >
+<!--  -->
+ 
+  <view class="WxEmojiChooseChooseView" style="display:{{WxEmojiObjs.showWxEmojiChooseView == 1 ? 'block' : 'none'  }};">
+    <block wx:for="{{WxEmojiObjs.emojiArray0}}" wx:key="">
+      <image bindtap="wxPreEmojiTap" style='display:{{display}}' data-text="(臉{{item}})" class="wxPreEmoji" src="/WxEmojiView/emojis/{{item}}.gif" />
+    </block>
+  </view>
+  
+<!--  -->
+   </swiper-item>
+</swiper>
+<!--  -->
+
+</view>
+
+<button class='ok'>留言</button>

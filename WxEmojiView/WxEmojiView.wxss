@@ -1,0 +1,63 @@
+.WxEmojiView{
+    align-items: center;
+    display: block;
+    height: 100rpx;
+    width: 100%;
+}
+.WxEmojiPreView{
+    margin: 20rpx 0;
+    padding: 20rpx 0;
+    background-color: #efefef;
+}
+.wxEmoji{
+    height: 60rpx;
+    width: 60rpx;
+}
+.box{
+  position: relative;
+  display: block;
+  height: 300rpx;
+}
+.WxEmojiTextarea{
+
+    min-height: 160rpx;
+    max-height: 160rpx;
+    margin: 10rpx;
+    width: 96%;
+
+    /* background-color: blue; */
+      z-index: 1;
+}
+.circle{
+  display: block;
+  height: 100rpx;
+  width: 100rpx;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 15rpx;
+  z-index: 999;
+}
+.WxEmojiHiddenTextarea{
+    height: 100rpx;
+    position: absolute;
+    left:0;
+    top: 0;
+}
+.WxEmojiViewContainer{
+
+}
+.WxEmojiChooseChooseView{
+    background-color: #eee;
+    display: flex;
+    /* width: 100%;
+    height: 200rpx; */
+}
+.wxPreEmoji{
+    height: 60rpx;
+    width: 60rpx;
+    margin: 10rpx;
+    display: inline-flex;
+    flex: 1;
+ 
+}
